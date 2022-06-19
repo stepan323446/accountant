@@ -1,0 +1,227 @@
+/* == START SCREEN == */
+@keyframes whiteScreenAnim{
+    from{
+        width: 100%;   
+    }
+    to{
+        width: 0%;
+    }
+}
+.white-screen
+{
+    position: absolute;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2000;
+    right: 0%;
+    animation-name: whiteScreenAnim;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes logoAnim{
+    from{
+        
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+header .logo{
+    opacity: 0;
+    animation-name: logoAnim;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes titleAnim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.titles .word1,
+.titles .word2,
+.titles .word3,
+.titles .word-5-1-1,
+.titles .word0,
+.titles .word-adaptive,
+.titles .word4,
+.titles .word6,
+.titles .word7,
+.titles .word8
+{
+    opacity: 0;
+    animation-name: titleAnim;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.titles .word1,
+.titles .word2
+{
+    animation-delay: 0.3s;
+}
+.titles .word3,
+.titles .word-adaptive
+{
+    animation-delay: 0.7s;
+}
+.titles .word4{
+    animation-delay: 0.8s;
+}
+.titles .word-5-1-1,
+.titles .word0{
+    animation-delay: 0.9s;
+}
+.titles .word6
+{
+    animation-delay: 1s;
+}
+.titles .word7{
+    animation-delay: 1.3s;
+}
+.titles .word8
+{
+    animation-delay: 1.4s;
+}
+@keyframes specialTitleAnim
+{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+.word5-2
+{
+    position: relative;
+}
+.word5-2::before{
+    content: '';
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 90%;
+    background-color: var(--brown-color);
+
+    animation-name: specialTitleAnim;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+/* Other animations */
+@keyframes h2Anim{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.anim h2{
+    opacity: 0;
+}
+.anim.anim-active h2{
+    animation-name: h2Anim;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes transformAnim{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes opacityAnim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.anim-opacity{
+    opacity: 0;    
+}
+.anim.anim-active .anim-opacity{
+    animation-name: transformAnim;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+.anim .anim-transform{
+    opacity: 0;
+}
+.anim.anim-active .anim-transform{
+    animation-name: opacityAnim;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+.delay-1
+{
+    animation-delay: 0.5s;
+}
+.delay-2
+{
+    animation-delay: 1s;
+}
+.delay-3
+{
+    animation-delay: 1.5s;
+}
+.delay-4{
+    animation-delay: 2s;
+}
+.anim-block__items > *{
+    opacity: 0;
+}
+.anim.anim-active .anim-block__items > *{
+    animation-name: opacityAnim;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+.anim #text-scroll-item{
+    animation: none;
+    opacity: 1;
+
+    transform: translateX(0px);
+    transition: 10s cubic-bezier(0.25, 0.1, 0.37, 0.75);
+}
+.anim.anim-active #text-scroll-item{
+    transform: translateX(-2800px);
+}
+@media only screen and (max-width: 1730px)
+{
+    .anim.anim-active #text-scroll-item{
+        transform: translateX(-3000px);
+    }
+}
+@media only screen and (max-width: 1520px)
+{
+    .anim.anim-active #text-scroll-item{
+        transform: translateX(-3200px);
+    }
+}
+@media only screen and (max-width: 1310px)
+{
+    .anim.anim-active #text-scroll-item{
+        transform: translateX(-3400px);
+    }
+}

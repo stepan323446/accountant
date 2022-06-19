@@ -882,6 +882,7 @@ h2.center
 #text-scroll-item span
 {
     color: var(--pallete-main-color);
+    font-size: 120px;
 }
 
 .what-can-do
